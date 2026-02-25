@@ -25,11 +25,9 @@ A modern movie search web application built using **React + Vite** that allows u
 
 ---
 
-## 🔗 Live Demo
-(Add Vercel link after deploy)
+## 🚀 Live Demo
 
----
+https://movie-search-app-git-main-varshagajis-projects.vercel.app/
 
-## ⭐ Resume Description
 
-Developed a React Movie Search Application with API integration, routing, and performance optimization using debounced search.
+
