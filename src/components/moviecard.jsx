@@ -1,13 +1,25 @@
 import { Link } from "react-router-dom";
 
 export default function MovieCard({ movie }) {
+  if (!movie) return null;
+
   return (
-    <Link to={`/movie/${movie.imdbID}`}>
-      <div>
-        <img src={movie.Poster} width="200" />
-        <h3>{movie.Title}</h3>
-        <p>{movie.Year}</p>
-      </div>
-    </Link>
+    <div className="movie-card">
+      <Link to={`/movie/${movie.imdbID}`}>
+        <img
+          src={
+            movie.Poster !== "N/A"
+              ? movie.Poster
+              : "https://via.placeholder.com/300x450?text=No+Image"
+          }
+          alt={movie.Title}
+        />
+
+        <div className="movie-info">
+          <h3>{movie.Title}</h3>
+          <p>{movie.Year}</p>
+        </div>
+      </Link>
+    </div>
   );
 }
